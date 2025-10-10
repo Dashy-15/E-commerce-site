@@ -1,0 +1,48 @@
+.custom-navbar {
+  width: 100%; /* Full width on all screens */
+  z-index: 1030; /* Ensures navbar stays above other content */
+}
+
+.navbar-nav {
+  flex-wrap: nowrap !important; /* Prevents links from wrapping to next line */
+}
+
+.nav-links {
+  display: flex !important;       /* Force horizontal layout */
+  flex-direction: row !important; /* Ensure row direction */
+  flex-wrap: nowrap !important;   /* Prevent wrapping */
+  justify-content: center;        /* Center links */
+  align-items: center;            /* Vertically align links */
+}
+
+.banner {
+  min-height: 40vh;
+  background-color: #00000070; /* Optional background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-transparent-sky {
+  background-color: transparent;
+  color: skyblue;
+  border: 1px solid skyblue;
+  transition: 0.3s ease;
+}
+
+.btn-transparent-sky:hover {
+  background-color: skyblue;
+  color: black;
+}
+
+.play-image {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.play-image:hover {
+  transform: scale(1.1);
+}

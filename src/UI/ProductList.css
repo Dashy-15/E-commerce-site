@@ -1,0 +1,23 @@
+.product-card .image-container {
+  height: 250px;         /* keep fixed height */
+  overflow: hidden;       /* prevent zoomed image from overflowing */
+}
+
+.product-card .image-container img {
+  width: 100%;           /* maintain original width */
+  height: 100%;          /* maintain original height */
+  transition: transform 0.3s ease;
+  object-fit: contain;   /* ensure image scales nicely inside container */
+}
+
+.product-card:hover .image-container img {
+  transform: scale(1.1); /* small zoom on hover */
+}
+
+.banner {
+  background-color: gray; /* or use #6c757d or any color */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
