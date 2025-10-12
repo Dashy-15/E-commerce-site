@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ProductList.css";
 import NavbarHeader from "./NavbarHeader/NavbarHeader";
+import CartContext from "../Global/cart-context";
 
 const products = [
   {
@@ -32,6 +33,16 @@ const products = [
 ];
 
 function ProductList() {
+  const cartCtx = useContext(CartContext);
+  const addToCartHandler = (product) => {
+    cartCtx.addItem({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      quantity: 1,
+    });
+  };
+
   return (
     <>
       <NavbarHeader />
@@ -42,7 +53,7 @@ function ProductList() {
             <Col
               key={product.id}
               xs={10}
-              sm={6}
+              sm={12}
               md={6}
               lg={6}
               className="px-0"
@@ -62,7 +73,7 @@ function ProductList() {
                   </div>
                   <Card.Title className="fw-semibold mt-3">{product.title}</Card.Title>
                   <Card.Text className="fs-5 mb-3">${product.price}</Card.Text>
-                  <Button variant="dark" className="rounded-pill w-50">
+                  <Button variant="dark" className="rounded-pill w-50" onClick={() => addToCartHandler(product)}>
                     ADD TO CART
                   </Button>
                 </Card.Body>

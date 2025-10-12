@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, useLocation } from "react-router-dom";
 import "./NavbarHeader.css";
 import playBtn from "../../Assets/play.png";
+import CartButton from "./CartButton";
 
 function NavbarHeader() {
   const location = useLocation();
@@ -20,9 +21,9 @@ function NavbarHeader() {
             <Nav.Link as={Link} to="/store">STORE</Nav.Link>
             <Nav.Link as={Link} to="/about">ABOUT</Nav.Link>
           </Nav>
+          <CartButton />
         </Container>
       </Navbar>
-
       <div className="banner text-center text-white py-5 mt-5">
         <h1 className="display-3 fw-bold">The Generics</h1>
 
