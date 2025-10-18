@@ -3,7 +3,7 @@ import "./CartButton.css";
 import { useContext } from "react";
 import CartContext from "../../Global/cart-context";
 
-function CartButton() {
+function CartButton(props) {
   const ctx = useContext(CartContext);
 
   // Calculate total number of items in cart
@@ -13,7 +13,7 @@ function CartButton() {
 
   return (
     <div className="cart-button-container">
-      <Button variant="outline-info" className="cart-btn">
+      <Button variant="outline-info" className="cart-btn" onClick={props.onClick}>
         Cart
         <span className="cart-count">{numberOfCartItems}</span>
       </Button>

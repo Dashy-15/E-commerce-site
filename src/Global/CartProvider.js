@@ -30,7 +30,7 @@ const cartReducerFun = (state, action) => {
         const updatedTotalPrice = state.totalPrice - existingItem.price;
         let updatedItems;
         if(existingItem.quantity === 1) {
-            updatedItems = state.items.filter((item) => item.id !== action.item.id)
+            updatedItems = state.items.filter((item) => item.id !== action.id)
         } else {
             const updatedExistingItem = {...existingItem, quantity: existingItem.quantity - 1};
             updatedItems = [...state.items];
@@ -41,6 +41,7 @@ const cartReducerFun = (state, action) => {
             totalPrice: updatedTotalPrice
         }
     }
+    return defaultCart;
 }
 
 function CartProvider(props) {

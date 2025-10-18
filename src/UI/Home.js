@@ -1,5 +1,6 @@
 import { Button, Row, Col, Container } from "react-bootstrap";
 import NavbarHeader from "./NavbarHeader/NavbarHeader";
+import Footer from "../Footer/Footer";
 
 function Home() {
     const tours = [
@@ -27,7 +28,7 @@ function Home() {
                             <Col xs={12} md={4}>
                                 {tour.venue}
                             </Col>
-                            <Col xs={12} md={3} className="text-md-end mt-2 mt-md-0 pt-2">
+                            <Col xs={4} md={3} className="text-md-end mt-2 mt-md-0 pt-2">
                                 <Button variant="info" className="fw-semibold text-white w-100">
                                     BUY TICKETS
                                 </Button>
@@ -36,6 +37,7 @@ function Home() {
                     ))}
                 </div>
             </Container>
+            <Footer /> 
         </>
     );
 }

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./ProductList.css";
 import NavbarHeader from "./NavbarHeader/NavbarHeader";
 import CartContext from "../Global/cart-context";
+import Footer from "../Footer/Footer";
 
 const products = [
   {
@@ -37,6 +38,7 @@ function ProductList() {
   const addToCartHandler = (product) => {
     cartCtx.addItem({
       id: product.id,
+      imageUrl: product.imageUrl,
       title: product.title,
       price: product.price,
       quantity: 1,
@@ -82,6 +84,7 @@ function ProductList() {
           ))}
         </Row>
       </Container>
+      <Footer />
     </>
   );
 }

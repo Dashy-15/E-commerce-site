@@ -1,0 +1,23 @@
+.footer {
+  background-color: #5bc0de; /* matches your blue theme */
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer h3 {
+  font-weight: 700;
+  margin: 0;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+.footer a:hover {
+  opacity: 0.7;
+}
+
+.footer .social-icons {
+  margin-right: 40px; /* move icons left */
+}
+
